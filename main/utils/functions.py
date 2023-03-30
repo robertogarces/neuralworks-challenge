@@ -4,6 +4,10 @@ import pandas as pd
 
 class utils:
 
+    def __init__(self) -> None:
+        print("Utils inicializado correctamente")
+
+
     def load_pickles_from_directory(self, directory):
         """
         Cargar todos los archivos pkl en el directorio especificado
