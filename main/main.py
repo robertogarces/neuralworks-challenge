@@ -41,12 +41,12 @@ async def model_status():
     
     # Devuelve el estado del modelo entregando info
     return {
-        'python version': platform.python_version(),
-        'model_status': model_status,
-        'model_type': 'LGBM',
-        'model_file': model_file,
-        'model_input_variables': ['OPERA', 'SIGLADES', 'FECHA_PROGRAMADA'],
-        'input_example': {'OPERA': 'Sky Airline','SIGLADES':'Calama', 'FECHA_PROGRAMADA':'2017-11-27 13:00:00'}
+        'python version': platform.python_version(), #Version de Python
+        'model_status': model_status, #Estado del modelo
+        'model_type': 'LGBM', #Tipo de algoritmo
+        'model_file': model_file, #Algoritmo entrenado
+        'model_input_variables': ['OPERA', 'SIGLADES', 'FECHA_PROGRAMADA'], #INPUT variables
+        'input_example': {'OPERA': 'Sky Airline','SIGLADES':'Calama', 'FECHA_PROGRAMADA':'2017-11-27 13:00:00'} #Ejemplo
     }
 
 @app.post("/predict_delay_probability")
