@@ -3,10 +3,10 @@ name: Deploy to Cloud Run
 on:
   push:
     branches:
-      - main
+      - master
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  APP_ID: continous-deployment
+  APP_ID: build-and-deploy-late-flight-model
   RUN_REGION: us-east1
   SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
 jobs:
