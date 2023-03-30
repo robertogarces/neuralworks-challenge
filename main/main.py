@@ -79,4 +79,4 @@ async def predict_delay_probability(input_data: InputData):
     y_pred = ['Alta probabilidad de atraso' if probs > 0.5 else 'Baja probabilidad de atraso']
     
     # Return the predictions
-    return {'delay_probability': probs, 'clase': y_pred}
+    return {'delay_probability': probs, 'clase': y_pred, 'build_deploy': True}
