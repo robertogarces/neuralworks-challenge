@@ -6,10 +6,6 @@ Este repositorio ha sido creado con el fin de desarrollar el desafío tecnico pr
 
 Este repo contiene (1) rama development la cual fue utilizada para el desarrollo de este desafío y (2) rama main para el despliegue del algoritmo en Google Cloud Run con CI/CD implementado sobre la misma rama.
 
-## tl-tr
-
-
-
 ## Problema
 Te encuentras trabajando en un equipo conformado por varios Data Scientists. Uno de ellos, Juan, ha terminado sus experimentos y te ha pedido que habilites un servicio para que su modelo pueda ser consumido por varios actores fuera del equipo.
 Juan escribió en un Jupyter Notebook una serie de modelos para predecir la probabilidad de atraso de los vuelos que aterrizan o despegan del aeropuerto de Santiago de Chile (SCL). Para eso utilizó un dataset de datos públicos y reales donde cada fila corresponde a un vuelo que aterrizó o despegó de SCL. Para cada vuelo se cuenta con la siguiente información:
