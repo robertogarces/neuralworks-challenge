@@ -94,6 +94,7 @@ Tu desafío consiste en tomar el trabajo de Juan y exponerlo para que sea utiliz
 4. Automatiza el proceso de build y deploy de la API, utilizando uno o varios servicios cloud. Argumenta tu decisión sobre los servicios utilizados.
 
 5. Realiza pruebas de estrés a la API con el modelo expuesto con al menos 50.000 requests durante 45 segundos. Para esto debes utilizar esta herramienta y presentar las métricas obtenidas. ¿Cómo podrías mejorar el performance de las pruebas anteriores?
+
 ## Desarrollo
 
 El repositorio cuenta con la siguientes estructura:
@@ -156,7 +157,7 @@ Donde:
 
 ## to-expose-JA:
 
-### Desarrollo:
+### Comentarios:
 
 Si bien dentro del trabajo de Juan se realiza el split de data para el proceso de entrenamiento, en ningun punto es comparado con la data de testeo (para prevenir overfitting). Dado lo anterior, se vuelve a realizar split de data tomando 10% para testing, 20% para validacion, y 70% para entrenamiento. Dado el rendimiento del algoritmo se utliza calculo de [Lift curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871) para buscar el corte de probabilidad que permite obtener mayor probabilidad de exito en detectar atrasos.
 
@@ -355,7 +356,8 @@ Si bien dentro del trabajo de Juan se realiza el split de data para el proceso d
         }
         ```
 4. Pruebas de stress del servicio:
-      * asd
+      * Para cumplir con la prueba de estres, se utiliza [wrk](https://github.com/wg/wrk) generando durante 45 segundos 50.000 requests a [endpoint](https://build-and-deploy-late-flight-model-5btddo6ama-ue.a.run.app/model_status)
+      * 
       
 6. Creacion de aplicacion backoffice en low code Budibase:
       * Link para uso: [neuralworks delay flight predictions on budibase](https://jaimearroyodevs.budibase.app/app/neuralworks-delay-flight-predictions)
