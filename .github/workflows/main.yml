@@ -50,14 +50,14 @@ jobs:
           password: ${{ secrets.GCP_SA_KEY_JSON }}
 
       # Build and push image to Google Container Registry
-      - name: Build
+      #- name: Build
         #run: gcloud builds submit --tag gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA
-        run: gcloud builds submit --tag gcr.io/neuralworks-challenge/build-and-deploy-late-flight-model:$GITHUB_SHA .
+        #run: gcloud builds submit --tag gcr.io/neuralworks-challenge/build-and-deploy-late-flight-model:$GITHUB_SHA .
 
-      #- name: Build and Push Container
-      #  run: |-
-      #    docker build -t "gcr.io/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}" ./
-      #    docker push "gcr.io/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}"
+      - name: Build and Push Container
+        run: |-
+          docker build -t "gcr.io/$PROJECT_ID/$REPOSITORY/$SERVICE:${{ github.sha }}" ./
+          docker push "gcr.io/$PROJECT_ID/$REPOSITORY/$SERVICE:${{ github.sha }}"
 
 
       - name: Deploy to Cloud Run
