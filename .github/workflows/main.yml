@@ -45,7 +45,7 @@ jobs:
       #  run: npm ci
 
       - name: Build and Push Container
-        run: gcloud builds submit --tag gcr.io/$PROJECT_ID/$APP_ID:$GITHUB_SHA
+        run: gcloud builds submit --tag gcr.io/$PROJECT_ID/$SERVICE:$GITHUB_SHA
         # END - Docker auth and build
 
       - name: Deploy to Cloud Run
