@@ -357,7 +357,10 @@ Si bien dentro del trabajo de Juan se realiza el split de data para el proceso d
         ```
 4. Pruebas de stress del servicio:
       * Para cumplir con la prueba de estres, se utiliza [wrk](https://github.com/wg/wrk) generando durante 45 segundos 50.000 requests a [endpoint](https://build-and-deploy-late-flight-model-5btddo6ama-ue.a.run.app/model_status)
-      * 
+      * Resultados 1er run:
+      * ![image](https://user-images.githubusercontent.com/41343847/229163917-0fcef71c-42f5-45ce-8526-486e208bb38a.png)
+      * Para mejorar los tiempos de respuesta se puede configurar una maquina con multithreads, aumentando la cantidad maxima de solicitudes por contendedor y el numero de instancias maximas aumentando el costo de consumo cloud (Dado que es un desafio, no se hara por efectos de costos y uso de cuenta personal).
+
       
 6. Creacion de aplicacion backoffice en low code Budibase:
       * Link para uso: [neuralworks delay flight predictions on budibase](https://jaimearroyodevs.budibase.app/app/neuralworks-delay-flight-predictions)
