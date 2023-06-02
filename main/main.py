@@ -10,10 +10,11 @@ from utils.functions import utils
 import pickle
 import warnings
 warnings.filterwarnings('ignore')
+from flask import Flask
 
 # Definiendo APP
-app = FastAPI()
-
+app = Flask()
+ 
 #Inicializar utils functions
 u = utils()
 
