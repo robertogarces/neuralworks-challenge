@@ -6,6 +6,7 @@ WORKDIR /main
 
 COPY requirements.txt .
 
+ADD Flask ./Flasj
 # Install the required packages
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y install curl
