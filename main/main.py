@@ -11,6 +11,7 @@ import pickle
 import warnings
 warnings.filterwarnings('ignore')
 from flask import Flask
+import pandas
 
 # Definiendo APP
 app = Flask()
