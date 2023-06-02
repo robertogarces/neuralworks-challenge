@@ -1,2 +1,2 @@
 docker build -t my-fastapi-app .
-docker run -p 8000:8000 delay_flight_prediction
+docker run -p 8001:8001 delay_flight_prediction
