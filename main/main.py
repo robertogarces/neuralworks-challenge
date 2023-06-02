@@ -10,6 +10,7 @@ from utils.functions import utils
 import pickle
 import warnings
 warnings.filterwarnings('ignore')
+import pandas
 
 # Definiendo APP
 app = FastAPI()
